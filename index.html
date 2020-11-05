@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="description" content="Days in quarantine">
+  <meta name="keywords" content="quarantime">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c21515">
+
+  <title>Quarantime</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+	<div class="text">
+		<h1>Day <span id="quarantime"></span></h1>
+	</div>
+</div>
+
+	<script type = "text/javascript" > 
+	 
+	var today = new Date();
+
+	function days_passed(dt) {
+	  var current = new Date(dt.getTime());
+	  var previous = new Date("03/09/2020");
+
+	  return Math.floor((current - previous + 1) / 86400000);
+	}
+
+	quarantime = days_passed(today)
+
+	document.getElementById("quarantime").innerHTML = quarantime
+	</script>
+
+</body>
+</html>
